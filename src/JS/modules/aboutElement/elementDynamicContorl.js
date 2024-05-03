@@ -1,13 +1,13 @@
 /** 
  * * 특정 element를 인자로 받아 클래스를
-  @param element
+  @param element 
 */
 export default function (element) {
-  if (element.tagName.toLowerCase() == `body`) {
-    styles = {
-      width: `100%`,
-      height: `100%`,
-      backgroundColor: `#D9D9D9`,
+  if (element.className == `header-menu-li`) {
+    headerLi = {
+      // width: `100%`,
+      // height: `100%`,
+      // backgroundColor: `#D9D9D9`,
     };
 
     const stylesObjectArr = Object.entries(styles);
@@ -18,6 +18,7 @@ export default function (element) {
      * * element.style.height = `100%`;
      * * element.style.backgroundColor = `#D9D9D9`;
      */
+
     for (let i = 0; i < stylesObjectArr.length; i++) {
       element.style[stylesObjectArr[i][0]] = stylesObjectArr[i][1];
     }

@@ -1,9 +1,11 @@
 export default Object = {
+  // * 기능 상 부모 역할을 담당하게 될 Element들이 assign될 객체로, property로서 보이지 않는 부모 element들이 함수에서 generate됨
   parentElements: {
     root: document.getElementById(`root`),
   },
 
   divs: {
+    // !--------------------------------------- not to used
     rootFirstChildDiv: {
       element: `div`,
       className: `root-first-child-div`,
@@ -28,9 +30,23 @@ export default Object = {
       id: ``,
     },
 
-    rootfifthChildDiv: {
+    rootFifthChildDiv: {
       element: `div`,
       className: `root-fifth-child-div`,
+      id: ``,
+    },
+
+    // !--------------------------------------- not to used
+
+    firstSectionFirstChildDiv: {
+      element: `div`,
+      className: `first-section-first-child-div`,
+      id: ``,
+    },
+
+    firstSectionSecondChildDiv: {
+      element: `div`,
+      className: `first-section-second-child-div`,
       id: ``,
     },
 
@@ -62,7 +78,7 @@ export default Object = {
 
     firstSection: {
       element: `section`,
-      className: ``,
+      className: `first-section`,
       id: ``,
     },
 
@@ -97,9 +113,21 @@ export default Object = {
     id: ``,
   },
 
-  li: {
+  headerLi: {
     element: `li`,
-    className: ``,
+    className: `header-menu-li`,
+    id: ``,
+  },
+
+  firstSectionFirstChildDivImg: {
+    element: `img`,
+    className: `first-section-first-child-div-img`,
+    id: ``,
+  },
+
+  firstSectionSecondChildDivImg: {
+    element: `img`,
+    className: `first-section-second-child-div-img`,
     id: ``,
   },
 };
