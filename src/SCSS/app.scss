@@ -1,0 +1,6 @@
+@use "mixIns";
+
+body {
+  @include mixIns.create_contents_container(100%, 100%);
+  @include mixIns.flex_basic_layout;
+}
