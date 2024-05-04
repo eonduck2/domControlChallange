@@ -1,0 +1,42 @@
+@import url(./lessMixin.less);
+
+.bodyStyle {
+  #my-library > .my-mixin(100%, 100%);
+  overflow: hidden;
+}
+
+.rootStyle {
+  #my-library > .my-mixin(100vw, 100vh);
+}
+
+.headerStyle {
+  #my-library > .my-mixin(100%, 5%);
+}
+
+.navStyle {
+  #my-library > .my-mixin(100%, 100%);
+}
+
+.ulStyle {
+  #my-library > .flex-basic-layout();
+  #my-library > .my-mixin(100%, 100%);
+  gap: 2.5rem;
+}
+
+.mainStyle {
+  #my-library > .my-mixin(100%, 95%);
+}
+
+.firstSectionStyle {
+  #my-library > .my-mixin(100%, 100%);
+  #my-library > .grid-column-layout();
+}
+
+.firstSectionDivsStyle {
+  #my-library > .my-mixin(100%, 100%);
+  #my-library > .flex-basic-layout();
+}
+
+.firstSectionImgs {
+  #my-library > .my-mixin(50%, 50%);
+}

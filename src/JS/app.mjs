@@ -121,7 +121,6 @@ const createHTML = () => {
 
     // ! first_img
     parentElementArrayObject.main.firstSectionChildren.forEach((element) => {
-      console.log(element);
       if (element.className == `first-section-first-child-div`) {
         elementObject.default.parentElements.firstSectionFirstChildDiv =
           element;
@@ -176,18 +175,18 @@ const createHTML = () => {
     };
 
     const appendFirstSectionFirstChildDiv = (newAssignedElementParent) => {
-      console.log(newAssignedElementParent);
       parentElementArrayObject.main.firstSectionFirstChildDiv.forEach(
         (element) => {
+          element.src = `../../public/Images/test.jpg`;
           appendElement.default(newAssignedElementParent, element);
         }
       );
     };
 
     const appendFirstSectionSecondChildDiv = (newAssignedElementParent) => {
-      console.log(newAssignedElementParent);
       parentElementArrayObject.main.firstSectionSecondChildDiv.forEach(
         (element) => {
+          element.src = `./public/Images/frozen_cat.png`;
           appendElement.default(newAssignedElementParent, element);
         }
       );

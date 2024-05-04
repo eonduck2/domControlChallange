@@ -1,19 +1,48 @@
-#my-library {
-  .my-mixin(@test_width, @test_height) {
-    width: @test_width;
-    height: @test_height;
-  }
-}
-// which can be used like this
-.bodyStyle {
-  #my-library > .my-mixin(100vw, 100vh);
-}
+@import url(./lessMixin.less);
+@import url(./lessVars.less);
+@import url(./lessCreatedStyle.less);
 
-.headerStyle {
-  #my-library > .my-mixin(100vw, 100vh);
-}
+// ! -----------------------------
 
 body {
-  background-size: cover;
+  background-color: red;
   .bodyStyle;
+
+  #root {
+    .rootStyle;
+
+    header {
+      background-color: blue;
+      .headerStyle;
+
+      nav:first-child {
+        .navStyle;
+
+        > ul:first-child {
+          list-style-type: none;
+          margin: @ul-margin;
+
+          .ulStyle;
+        }
+      }
+    }
+
+    main {
+      .mainStyle;
+
+      section:first-child {
+        .firstSectionStyle;
+
+        div:first-child {
+          background-color: aliceblue;
+          .firstSectionDivsStyle;
+        }
+
+        div:nth-child(2) {
+          background-color: cadetblue;
+          .firstSectionDivsStyle;
+        }
+      }
+    }
+  }
 }
